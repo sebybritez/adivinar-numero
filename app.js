@@ -16,11 +16,11 @@ function promptFirstNumber() {
     number = parseInt(number);
     if (isNaN(number)) {
       console.log("No es un número");
-      return promptFirstNumber(); 
+      return promptFirstNumber(); ///Vuelve a pedir que ingrese el primer intento en caso de que no sea un numero.
     }
     if (!validNumberQuantity(number)) {
-      console.log("El número no está dentro de los parámetros definidos (1 y 100)");
-      return promptFirstNumber();
+      console.log("El número no está dentro de los parámetros definidos (1 y 100)"); 
+      return promptFirstNumber(); // vuelve a pedir que ingreso porque no ingreso un numero entre 1 y 100.
     }
     return number;
   }
@@ -39,11 +39,11 @@ function promptNumberLessThanRandomNumber(remainingTries){
     number = parseInt(number)
     if(isNaN(number)) {
         console.log('No es un numero')
-        return promptNumberLessThanRandomNumber(remainingTries);
+        return promptNumberLessThanRandomNumber(remainingTries); // si no ingresa un numero, vuelve a pedir el el ingreso, sin perder el intento.
     }
     if(!validNumberQuantity(number)) {
         console.log('El numero no está dentro de los parametro definidos (1 y 100)');
-        return promptNumberLessThanRandomNumber(remainingTries);
+        return promptNumberLessThanRandomNumber(remainingTries); // si no ingresa un numero entre 1 y 100, vuelve a pedir el el ingreso, sin perder el intento.
     }
     return number;
 
